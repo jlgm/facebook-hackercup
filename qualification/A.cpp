@@ -1,3 +1,8 @@
+/*
+Wrong answer: my angle() function returns the smallest angle between three points, which is not what I intended.
+Fix: verify if X is less than 50. If it is, angle() should be added 180.
+*/
+
 #pragma comment(linker, "/STACK:16777216")
 #include <bits/stdc++.h>
 

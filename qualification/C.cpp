@@ -1,3 +1,7 @@
+/*
+accepted solution
+*/
+
 #pragma comment(linker, "/STACK:16777216")
 #include <bits/stdc++.h>
 
