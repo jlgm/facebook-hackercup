@@ -14,19 +14,15 @@ typedef long long ll;
 ll n, m, sum[305][305], memo[305][305];
 vector<ll> c[305];
 
-bool cmp(vector<ll> a, vector<ll> b) { return a[0] < b[0]; }
-
 ll take(ll i, ll amt) {
     return sum[i][amt-1] + (amt)*(amt);
 }
 
 ll solve(ll k, ll taken) {
-
     if ((n-taken == 0) || (k==n)) return 0LL;
     if (memo[k][taken] != -1) return memo[k][taken];
 
     ll tot = INF;
-
     for(ll i = 1; i <= m; i++) {
         ll foo = take(k,i) + solve(k+1,taken+i);
         tot = min(foo, tot);
